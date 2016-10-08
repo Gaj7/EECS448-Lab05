@@ -1,7 +1,12 @@
 <?php
 $username = $_POST["username"];
 
-echo "Name: " . $username;
+if($username = ""){
+  echo "Could not create new user, no username was entered.";
+}
+else {
+  echo "User " . $username . " successfully created.";
+}
 
 /*
 if($username = ""){
