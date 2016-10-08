@@ -1,7 +1,7 @@
 <?php
 $username = $_POST["username"];
 if($username == ""){
-  echo "Could not create new user, no username was entered.";
+  echo "Could not create new user: no username was entered.";
 }
 else{
 
@@ -17,10 +17,9 @@ else{
     echo 'User "' . $username . '" successfully created.';
   }
   else {
-    echo "Could not create new user, username already taken";
+    echo "Could not create new user: username " . $username ." already taken";
   }
-
-
+}
 
 //   $nameIsUnique = true;
 //   if($result = $mysqli->query("SELECT user_id FROM Users")){
