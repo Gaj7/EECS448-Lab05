@@ -18,11 +18,11 @@ else{
   $userExists = false;
   if($result = $mysqli->query("SELECT user_id FROM Users")){
     while ($row = $result->fetch_assoc()) {
-        if($username == $row["user_id"]){
-          $userExists = true;
-          break;
-        }
+      if($username == $row["user_id"]){
+        $userExists = true;
+        break;
       }
+    }
     $result->free();
   }
 
@@ -39,5 +39,4 @@ else{
     echo "Could not create new post: no user found for that username.";
   }
 }
-
 ?>

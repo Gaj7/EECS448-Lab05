@@ -18,26 +18,4 @@ else{
     echo 'Could not create new user: username "' . $username . '" already taken';
   }
 }
-
-//   $nameIsUnique = true;
-//   if($result = $mysqli->query("SELECT user_id FROM Users")){
-//     while ($row = $result->fetch_assoc()) {
-//         if($username == $row["user_id"])
-//           $nameIsUnique = false;
-//       }
-//     $result->free();
-//   }
-//
-//   if($nameIsUnique){
-//     $ins = "INSERT INTO Users(user_id) VALUES('$username')";
-//     if ($mysqli->query($ins) === TRUE) {
-//       echo 'User "' . $username . '" successfully created.';
-//     }
-//     else {
-//       echo "Error: " . $mysqli->error;
-//     }
-//   }
-//   else
-//     echo "Could not create new user, username already taken.";
-// }
 ?>
