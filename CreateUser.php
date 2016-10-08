@@ -5,7 +5,7 @@ if($username == ""){
 }
 else{
 
-  $mysqli = new mysqli("https://mysql.eecs.ku.edu/", "gjurgensen", "Password123!2", "gjurgensen");
+  $mysqli = new mysqli("mysql.eecs.ku.edu", "gjurgensen", "Password123!2", "gjurgensen");
   /* check connection */
   if ($mysqli->connect_errno) {
       printf("Connection failed: %s\n", $mysqli->connect_error);
@@ -35,30 +35,4 @@ else{
   else
     echo "Could not create new user, username already taken.";
 }
-
-
-
-
-
-// $username = $_POST["username"];
-//
-// if($username == ""){
-//   echo "Could not create new user, no username was entered.";
-// }
-// else {
-//   echo "User " . $username . " successfully created.";
-// }
-
-/*
-if($username == ""){
-  echo "Could not create new user, no username was entered.";
-}
-//elseif ( username is already in table)
-//  echo "Could not create new user, username already taken.";
-else {
-  //add user to table
-  echo "User " . $username . " successfully created.";
-}
-*/
-
 ?>
