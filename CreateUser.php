@@ -12,26 +12,24 @@ else{
       exit();
   }
 
-  //$query = "SELECT user_id FROM Users";
   $nameIsUnique = true;
   if($result = $mysqli->query("SELECT user_id FROM Users")){
     while ($row = $result->fetch_assoc()) {
-        //printf ("%s (%s)\n", $row["Name"], $row["CountryCode"]);
         echo $row["user_id"] . "<br>";
-        $nameIsUnique = false;
+        if($username == $row["user_id"])
+          $nameIsUnique = false;
       }
     $result->free();
   }
 
   if($nameIsUnique){
-    $ins = "INSERT INTO Users(user_id) VALUES(" . $username . ")";
+    $ins = "INSERT INTO Users(user_id) VALUES('$username')";
     if ($mysqli->query($ins) === TRUE) {
-      echo "User " . $username . " successfully created.";
+      echo 'User "' . $username . '" successfully created.';
     }
     else {
       echo "Error: " . $mysqli->error;
     }
-    //echo "User " . $username . " successfully created.";
   }
   else
     echo "Could not create new user, username already taken.";
