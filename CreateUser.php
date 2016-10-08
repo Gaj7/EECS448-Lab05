@@ -5,10 +5,10 @@ if($username == ""){
 }
 else{
 
-  $mysqli = new mysqli("https://mysql.eecs.ku.edu", "gjurgensen", "Password123!2", "gjurgensen");
+  $mysqli = new mysqli("https://mysql.eecs.ku.edu/index.php?db=gjurgensen&token=936225b36729182c75f8cd9e5109329d", "gjurgensen", "Password123!2", "gjurgensen");
   /* check connection */
   if ($mysqli->connect_errno) {
-      printf("Connect failed: %s\n", $mysqli->connect_error);
+      printf("Connection failed: %s\n", $mysqli->connect_error);
       exit();
   }
 
