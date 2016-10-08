@@ -17,7 +17,7 @@ else{
     echo 'User "' . $username . '" successfully created.';
   }
   else {
-    echo "Could not create new user: username " . $username ." already taken";
+    echo 'Could not create new user: username "' . $username . '" already taken';
   }
 }
 
