@@ -28,7 +28,7 @@ else{
       echo "User " . $username . " successfully created.";
     }
     else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
+      echo "Error: " . $mysqli->error;
     }
     //echo "User " . $username . " successfully created.";
   }
