@@ -24,7 +24,7 @@ else{
   }
 
   if($nameIsUnique){
-    if ($mysqli->query("INSERT INTO Users (user_id) VALUES ($username)") === TRUE) {
+    if ($mysqli->query("INSERT INTO Users(user_id) VALUES($username)") === TRUE) {
       echo "User " . $username . " successfully created.";
     }
     else {
