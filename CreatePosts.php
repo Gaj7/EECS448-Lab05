@@ -27,7 +27,7 @@ else{
   }
 
   if($userExists){
-    $ins = "INSERT INTO Posts(content, author_id) VALUES('$post', $userID)";
+    $ins = "INSERT INTO Posts(content, author_id) VALUES('$post', '$username')";
     if ($mysqli->query($ins) === TRUE) {
       echo "Post successfully created.";
     }
