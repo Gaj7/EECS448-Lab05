@@ -4,7 +4,6 @@ if($username == ""){
   echo "Could not create new user: no username was entered.";
 }
 else{
-
   $mysqli = new mysqli("mysql.eecs.ku.edu", "gjurgensen", "Password123!2", "gjurgensen");
   /* check connection */
   if ($mysqli->connect_errno) {
@@ -12,8 +11,7 @@ else{
       exit();
   }
 
-  $ins = "INSERT INTO Users(user_id) VALUES('$username')";
-  if ($mysqli->query($ins) === TRUE) {
+  if ($mysqli->query("INSERT INTO Users(user_id) VALUES('$username')") === TRUE) {
     echo 'User "' . $username . '" successfully created.';
   }
   else {
