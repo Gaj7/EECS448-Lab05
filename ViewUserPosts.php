@@ -7,6 +7,7 @@ if ($mysqli->connect_errno) {
 }
 
 $username = $_POST["username"];
+echo $username . "<br>";
 $result = $mysqli->query("SELECT post_id, content, author_id FROM Posts WHERE user_id='$username'");
 if($result->num_rows > 0){
   echo "<table><tr><td>post_id</td><td>content</td><td>author_id</td></tr>";
@@ -15,5 +16,8 @@ if($result->num_rows > 0){
   }
   echo "</table>";
   $result->free();
+}
+else{
+  echo "test";
 }
 ?>
