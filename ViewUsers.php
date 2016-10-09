@@ -8,11 +8,11 @@ if ($mysqli->connect_errno) {
 
 $result = $mysqli->query("SELECT user_id FROM Users");
 if($result->num_rows > 0){
-  echo "Users:<ol>";
+  echo "<table><tr><td>user_id</td></tr>";
   while ($row = $result->fetch_assoc()) {
-    echo "<li>" . $row["user_id"] . "</li>";
+    echo "<tr><td>" . $row["user_id"] . "</td></tr>";
   }
-  echo "</ol>";
+  echo "</table>";
   $result->free();
 }
 ?>
