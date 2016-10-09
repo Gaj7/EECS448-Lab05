@@ -9,7 +9,7 @@ if ($mysqli->connect_errno) {
 if($result = $mysqli->query("SELECT post_id FROM Posts")){
   while ($row = $result->fetch_assoc()) {
     if($_POST[$row["post_id"]] == "y")
-      echo $post_id . "<br>";
+      echo $row["post_id"] . "<br>";
   }
 }
 ?>
