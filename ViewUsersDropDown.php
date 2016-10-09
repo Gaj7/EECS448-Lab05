@@ -8,9 +8,9 @@
 
   $result = $mysqli->query("SELECT user_id FROM Users");
   if($result->num_rows > 0){
-    echo "<select>";
+    echo "<select name='username'>";
     while ($row = $result->fetch_assoc()) {
-      echo "<option name='username' value='" . $row["user_id"] . "'>" . $row["user_id"] . "</option>";
+      echo "<option value='" . $row["user_id"] . "'>" . $row["user_id"] . "</option>";
     }
     echo "</select>";
     $result->free();
