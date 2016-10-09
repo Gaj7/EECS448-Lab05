@@ -6,7 +6,7 @@ if ($mysqli->connect_errno) {
     exit();
 }
 
-$result = $mysqli->query("SELECT user_id FROM Users")
+$result = $mysqli->query("SELECT user_id FROM Users");
 if($result->num_rows > 0){
   echo "Users:<ol>";
   while ($row = $result->fetch_assoc()) {
