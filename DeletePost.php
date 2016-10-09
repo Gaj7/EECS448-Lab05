@@ -10,9 +10,9 @@ if($result = $mysqli->query("SELECT post_id FROM Posts")){
   while ($row = $result->fetch_assoc()) {
     if($_POST[$row["post_id"]] == "y"){
       if($mysqli->query("DELETE FROM Posts WHERE post_id=" . $row['post_id']))
-        echo "post_id: " . $row["post_id"] . "successfully deleted.";
+        echo "post_id: " . $row["post_id"] . "successfully deleted.<br>";
       else
-        echo "post_id: " . $row["post_id"] . " failed to delet.";
+        echo "post_id: " . $row["post_id"] . " failed to delet.<br>";
     }
   }
 }
