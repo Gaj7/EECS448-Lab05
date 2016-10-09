@@ -7,8 +7,7 @@ if ($mysqli->connect_errno) {
 }
 
 $username = $_POST["username"];
-echo $username . "<br>";
-$result = $mysqli->query("SELECT post_id, content, author_id FROM Posts WHERE user_id='$username'");
+$result = $mysqli->query("SELECT post_id, content, author_id FROM Posts WHERE author_id='$username'");
 if($result->num_rows > 0){
   echo "<table><tr><td>post_id</td><td>content</td><td>author_id</td></tr>";
   while ($row = $result->fetch_assoc()) {
@@ -18,6 +17,6 @@ if($result->num_rows > 0){
   $result->free();
 }
 else{
-  echo "test";
+  echo "No posts have been made by that user";
 }
 ?>

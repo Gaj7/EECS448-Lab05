@@ -15,4 +15,7 @@ if($result->num_rows > 0){
   echo "</table>";
   $result->free();
 }
+else{
+  echo "No users have been created.";
+}
 ?>
