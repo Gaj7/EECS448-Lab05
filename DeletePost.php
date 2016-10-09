@@ -8,7 +8,8 @@ if ($mysqli->connect_errno) {
 
 if($result = $mysqli->query("SELECT post_id FROM Posts")){
   while ($row = $result->fetch_assoc()) {
-    echo "test: " . $_POST[$row["post_id"]] . "<br>";
+    if($_POST[$row["post_id"]] == "y")
+      echo $post_id . "<br>";
   }
 }
 ?>

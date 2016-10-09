@@ -11,7 +11,7 @@ if($result->num_rows > 0){
   echo "<table><tr><td>post_id</td><td>content</td><td>author_id</td><td>Delete?</td></tr><tr></tr>";
   while ($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["post_id"] . "</td><td>" . $row["content"] . "</td><td>" . $row["author_id"]
-      . "</td><td><input type='checkbox' name='delete' value='" . $row["post_id"] . "'></input></td></tr>";
+      . "</td><td><input type='checkbox' name='" . $row["post_id"] . "' value='y'></input></td></tr>";
   }
   echo "</table>";
   $result->free();
