@@ -12,7 +12,7 @@ if($result = $mysqli->query("SELECT post_id FROM Posts")){
       if($mysqli->query("DELETE FROM Posts WHERE post_id=" . $row['post_id']))
         echo "post_id: " . $row["post_id"] . "successfully deleted.";
       else
-        echo "post_id: " . $row["post_id"] . "failed to delet.";
+        echo "post_id: " . $row["post_id"] . " failed to delet.";
     }
   }
 }
