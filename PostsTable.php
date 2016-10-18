@@ -9,7 +9,7 @@ if ($mysqli->connect_errno) {
 $result = $mysqli->query("SELECT post_id, content, author_id FROM Posts");
 if($result->num_rows > 0){
   echo "<form action='DeletePost.php' method='post'>";
-  echo "<table cellpadding='10'>";
+  echo "<table cellpadding='5'>";
   echo "<tr><td>post_id</td><td>content</td><td>author_id</td><td>Delete?</td></tr><tr></tr>";
   while ($row = $result->fetch_assoc()) {
     echo "<tr><td>" . $row["post_id"] . "</td><td>" . $row["content"] . "</td><td>" . $row["author_id"]
