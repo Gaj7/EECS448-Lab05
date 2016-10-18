@@ -5,7 +5,7 @@ if($username == ""){
   echo "Could not create new post: no username was entered.";
 }
 elseif($post == ""){
-  echo "Could not create new post: no username was entered.";
+  echo "Could not create new post: the post is empty.";
 }
 else{
   $mysqli = new mysqli("mysql.eecs.ku.edu", "gjurgensen", "Password123!2", "gjurgensen");
